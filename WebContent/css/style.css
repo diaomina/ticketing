@@ -1,0 +1,90 @@
+body {
+	margin: 0 auto;
+	margin-top: auto;
+	margin-left: auto;
+	text-align: center;
+	background: rgba(127, 228, 241, 0.28);
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	line-height: 1em;
+	color: #000040;
+}
+
+table {
+	margin: 0 auto;
+	margin-top: auto;
+	margin-left: auto;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style-type: none;
+	margin-left: -40px;
+}
+
+li {
+	padding: 0px;
+	line-height: 60px;
+	font-size: 20px;
+}
+
+ul li a {
+	display: block;
+	width: 100%;
+	background: #ccc;
+	background:#80ffff;
+}
+
+ul li a:hover {
+	background:#146C9C;
+	background: #ff8040;	/* 悬浮在目标上面显示的颜色 */
+} 
+
+/*
+html {
+	overflow-y: scroll;
+}
+
+ body {
+	margin: 0;
+	padding: 29px00;
+	font: 100% "\5B8B\4F53", sans-serif;
+	font: 100% "\5B8B\4F53";
+	background: #ffffff;
+}
+
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset,
+	input, textarea, blockquote, p {
+	padding: 0;
+	margin: 0;
+}
+
+table, td, tr, th {
+	font-size: 12px;
+}
+
+li {
+	list-style-type: none;
+}
+
+img {
+	vertical-align: top;
+	border: 0;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-size: 12px;
+	font-weight: normal;
+}
+
+address, cite, code, em, th {
+	font-weight: normal;
+	font-style: normal;
+} */

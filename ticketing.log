@@ -1,0 +1,50 @@
+2019-09-04 15:49:16 com.alibaba.druid.pool.DruidDataSource.validationQueryCheck(DruidDataSource.java:809) DruidDataSource.java ERROR testWhileIdle is true, validationQuery not set
+2019-09-04 15:49:18 com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:669) DruidDataSource.java INFO {dataSource-1} inited
+2019-09-04 15:51:07 com.alibaba.druid.pool.DruidDataSource.validationQueryCheck(DruidDataSource.java:809) DruidDataSource.java ERROR testWhileIdle is true, validationQuery not set
+2019-09-04 15:51:08 com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:669) DruidDataSource.java INFO {dataSource-1} inited
+2019-09-04 15:54:54 com.alibaba.druid.pool.DruidDataSource.validationQueryCheck(DruidDataSource.java:809) DruidDataSource.java ERROR testWhileIdle is true, validationQuery not set
+2019-09-04 15:54:56 com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:669) DruidDataSource.java INFO {dataSource-1} inited
+2019-09-04 15:55:31 com.alibaba.druid.pool.DruidDataSource.validationQueryCheck(DruidDataSource.java:809) DruidDataSource.java ERROR testWhileIdle is true, validationQuery not set
+2019-09-04 15:55:32 com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:669) DruidDataSource.java INFO {dataSource-1} inited
+2019-09-04 15:55:47 com.alibaba.druid.pool.DruidDataSource.validationQueryCheck(DruidDataSource.java:809) DruidDataSource.java ERROR testWhileIdle is true, validationQuery not set
+2019-09-04 15:55:48 com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:669) DruidDataSource.java INFO {dataSource-1} inited
+2019-09-04 15:56:06 com.alibaba.druid.pool.DruidDataSource.validationQueryCheck(DruidDataSource.java:809) DruidDataSource.java ERROR testWhileIdle is true, validationQuery not set
+2019-09-04 15:56:07 com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:669) DruidDataSource.java INFO {dataSource-1} inited
+2019-09-04 15:56:18 com.alibaba.druid.pool.DruidDataSource.validationQueryCheck(DruidDataSource.java:809) DruidDataSource.java ERROR testWhileIdle is true, validationQuery not set
+2019-09-04 15:56:20 com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:669) DruidDataSource.java INFO {dataSource-1} inited
+2019-09-04 15:56:59 com.alibaba.druid.pool.DruidDataSource.validationQueryCheck(DruidDataSource.java:809) DruidDataSource.java ERROR testWhileIdle is true, validationQuery not set
+2019-09-04 15:57:00 com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:669) DruidDataSource.java INFO {dataSource-1} inited
+2019-09-04 15:58:22 com.alibaba.druid.pool.DruidDataSource.validationQueryCheck(DruidDataSource.java:809) DruidDataSource.java ERROR testWhileIdle is true, validationQuery not set
+2019-09-04 15:58:23 com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:669) DruidDataSource.java INFO {dataSource-1} inited
+2019-09-04 16:01:02 com.alibaba.druid.pool.DruidDataSource.validationQueryCheck(DruidDataSource.java:809) DruidDataSource.java ERROR testWhileIdle is true, validationQuery not set
+2019-09-04 16:01:03 com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:669) DruidDataSource.java INFO {dataSource-1} inited
+2019-09-04 16:01:16 com.alibaba.druid.pool.DruidDataSource.validationQueryCheck(DruidDataSource.java:809) DruidDataSource.java ERROR testWhileIdle is true, validationQuery not set
+2019-09-04 16:01:17 com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:669) DruidDataSource.java INFO {dataSource-1} inited
+2019-09-06 00:46:14 com.alibaba.druid.pool.DruidDataSource.validationQueryCheck(DruidDataSource.java:809) DruidDataSource.java ERROR testWhileIdle is true, validationQuery not set
+2019-09-06 00:46:15 com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:669) DruidDataSource.java INFO {dataSource-1} inited
+2019-09-06 00:46:28 com.alibaba.druid.pool.DruidDataSource.validationQueryCheck(DruidDataSource.java:809) DruidDataSource.java ERROR testWhileIdle is true, validationQuery not set
+2019-09-06 00:46:30 com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:669) DruidDataSource.java INFO {dataSource-1} inited
+2019-09-06 00:47:59 com.alibaba.druid.pool.DruidDataSource.validationQueryCheck(DruidDataSource.java:809) DruidDataSource.java ERROR testWhileIdle is true, validationQuery not set
+2019-09-06 00:48:01 com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:669) DruidDataSource.java INFO {dataSource-1} inited
+2019-09-06 00:50:11 com.alibaba.druid.pool.DruidDataSource.validationQueryCheck(DruidDataSource.java:809) DruidDataSource.java ERROR testWhileIdle is true, validationQuery not set
+2019-09-06 00:50:12 com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:669) DruidDataSource.java INFO {dataSource-1} inited
+2019-09-06 00:52:41 com.alibaba.druid.pool.DruidDataSource.validationQueryCheck(DruidDataSource.java:809) DruidDataSource.java ERROR testWhileIdle is true, validationQuery not set
+2019-09-06 00:52:42 com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:669) DruidDataSource.java INFO {dataSource-1} inited
+2019-09-06 00:55:02 com.alibaba.druid.pool.DruidDataSource.validationQueryCheck(DruidDataSource.java:809) DruidDataSource.java ERROR testWhileIdle is true, validationQuery not set
+2019-09-06 00:55:03 com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:669) DruidDataSource.java INFO {dataSource-1} inited
+2019-09-06 00:55:19 com.alibaba.druid.pool.DruidDataSource.validationQueryCheck(DruidDataSource.java:809) DruidDataSource.java ERROR testWhileIdle is true, validationQuery not set
+2019-09-06 00:55:20 com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:669) DruidDataSource.java INFO {dataSource-1} inited
+2019-09-06 00:56:48 com.alibaba.druid.pool.DruidDataSource.validationQueryCheck(DruidDataSource.java:809) DruidDataSource.java ERROR testWhileIdle is true, validationQuery not set
+2019-09-06 00:56:49 com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:669) DruidDataSource.java INFO {dataSource-1} inited
+2019-09-06 00:57:22 com.alibaba.druid.pool.DruidDataSource.validationQueryCheck(DruidDataSource.java:809) DruidDataSource.java ERROR testWhileIdle is true, validationQuery not set
+2019-09-06 00:57:23 com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:669) DruidDataSource.java INFO {dataSource-1} inited
+2019-09-06 00:57:29 com.alibaba.druid.pool.DruidDataSource.validationQueryCheck(DruidDataSource.java:809) DruidDataSource.java ERROR testWhileIdle is true, validationQuery not set
+2019-09-06 00:57:31 com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:669) DruidDataSource.java INFO {dataSource-1} inited
+2019-09-06 00:57:44 com.alibaba.druid.pool.DruidDataSource.validationQueryCheck(DruidDataSource.java:809) DruidDataSource.java ERROR testWhileIdle is true, validationQuery not set
+2019-09-06 00:57:46 com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:669) DruidDataSource.java INFO {dataSource-1} inited
+2019-09-06 00:57:52 com.alibaba.druid.pool.DruidDataSource.validationQueryCheck(DruidDataSource.java:809) DruidDataSource.java ERROR testWhileIdle is true, validationQuery not set
+2019-09-06 00:57:53 com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:669) DruidDataSource.java INFO {dataSource-1} inited
+2019-09-06 00:57:58 com.alibaba.druid.pool.DruidDataSource.validationQueryCheck(DruidDataSource.java:809) DruidDataSource.java ERROR testWhileIdle is true, validationQuery not set
+2019-09-06 00:57:59 com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:669) DruidDataSource.java INFO {dataSource-1} inited
+2019-09-06 00:58:03 com.alibaba.druid.pool.DruidDataSource.validationQueryCheck(DruidDataSource.java:809) DruidDataSource.java ERROR testWhileIdle is true, validationQuery not set
+2019-09-06 00:58:04 com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:669) DruidDataSource.java INFO {dataSource-1} inited

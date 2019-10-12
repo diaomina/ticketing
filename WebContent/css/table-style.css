@@ -1,0 +1,18 @@
+/**
+	表格样式
+	每行相间显示不同颜色
+*/
+table {
+	margin: 0 auto;
+	border-collapse:collapse;
+	border-spacing:0; 
+	border:1px  solid  black;	
+}
+
+table th {
+	background: rgb(64, 179, 245);
+}
+
+table tr:nth-child(odd) {
+	background: rgb(127, 228, 241);
+} 

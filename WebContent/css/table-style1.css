@@ -1,0 +1,25 @@
+/**
+	表格样式
+	每列相间显示不同颜色
+*/
+
+h1 {
+	margin: 0 auto;
+	text-align: center;
+}
+
+table {
+	margin: 0 auto;
+	cellspacing: 0;
+	border-collapse:collapse;
+	border-spacing:0; 
+	border:1px  solid  black;	
+}
+
+table th {
+	background: rgb(64, 179, 245);
+}
+
+table td:nth-child(odd) {
+	background: rgb(127, 228, 241);
+} 

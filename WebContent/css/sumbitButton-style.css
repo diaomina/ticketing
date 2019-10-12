@@ -1,0 +1,18 @@
+/**
+	sumbit按钮样式
+*/
+.sumbit-button { /* 按钮美化 */
+	width: 80px; /* 宽度 */
+	height: 30px; /* 高度 */
+	border-width: 0px; /* 边框宽度 */
+	border-radius: 3px; /* 边框半径 */
+	background: #1E90FF; /* 背景颜色 */
+	cursor: pointer; /* 鼠标移入按钮范围时出现手势 */
+	outline: none; /* 不显示轮廓线 */
+	font-family: Microsoft YaHei; /* 设置字体 */
+	color: white; /* 字体颜色 */
+	font-size: 17px; /* 字体大小 */
+}
+.sumbit-button:hover { /* 鼠标移入按钮范围时改变颜色 */
+	background: #5599FF;
+}

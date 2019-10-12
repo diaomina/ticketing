@@ -1,0 +1,54 @@
+﻿@charset "utf-8";
+
+.pageRecord {
+    overflow: auto;
+    float: right;
+}
+
+.dvpagerecord {
+    padding: 6px 12px;
+    background-color: #2468a9;
+    color: #2283C5;
+    float: left;
+    border: 1px solid #D9D9D9;
+    text-decoration: underline;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+    .dvpagerecord:hover {
+        cursor: pointer;
+    }
+
+        .dvpagerecord:hover i {
+            text-decoration: underline;
+        }
+
+.ulpageRecord {
+    max-width: 165px;
+    float: left;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+}
+
+    .ulpageRecord li {
+        margin: 0px;
+        padding: 6px 12px;
+        background-color: black;;
+        color: #2283C5;
+        display: inline-block;
+        font-size: 14px;
+        border: 1px solid #D9D9D9;
+    }
+
+        .ulpageRecord li:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+.currentPage {
+    background-color: black !important;
+    color: white !important;
+}

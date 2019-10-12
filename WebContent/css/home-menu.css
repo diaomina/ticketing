@@ -1,0 +1,48 @@
+/**
+	home.jsp顶部导航栏样式
+*/
+#head {
+	margin: 0 auto;
+	text-align: center;
+}
+
+#menu { 
+    padding-left: 250px;
+    text-align: center;
+    font: 15px verdana, arial, sans-serif;
+}
+
+#menu, #menu li {
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+
+#menu li { 
+    float:left; 
+}
+
+#menu li a {
+    display:block;
+    如果是中英文混排的文字，建议用固定宽度
+    width:150px;
+    height:30px;
+    line-height:30px;
+    text-align:center;
+    
+    padding:8px 50px;
+    background:#3A4953;
+    color:#fff;
+    text-decoration:none;
+    border-right:1px solid #000;
+}
+#menu li a:hover {
+    background:#146C9C;
+    color:#fff;
+    text-decoration:none;
+    border-right:1px solid #000;
+}
+#menu li a.last {
+   border-right:0; 去掉左侧边框
+}

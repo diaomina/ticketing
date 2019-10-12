@@ -1,0 +1,28 @@
+/* @charset "UTF-8";
+.d{
+	width: 400px;
+	margin: 100px auto;
+}
+table{
+	font-size: 20px;
+}
+strong{
+	font-size: 24px;
+}
+input{
+	font-size: 20px;
+}
+.input{
+	width: 100px;
+	text-align: right;
+}
+tr td{
+	height: 40px;
+}
+
+#submit{
+	text-align: center;
+}
+#submit input{
+	font-size: 16px;
+} */

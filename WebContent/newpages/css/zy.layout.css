@@ -1,0 +1,120 @@
+﻿@charset "utf-8";
+body {
+font-family:'Courier New';
+}
+.dvheader {
+    background-color:#2468a9;
+    height: 45px;
+    position: fixed;
+    top: 0px;
+    z-index: 2;
+    left: 0px;
+    right: 0px;
+   font-family:Arial;
+}
+
+.dvheadertools {
+    height: 45px;
+    padding: 0px 20px;
+}
+
+.headerimglogo {
+    height: 40px;
+    width: 40px;
+    margin: 2px;
+    float: left;
+}
+
+.headerspantitle {
+    color: white;
+    font-size: 18px;
+    float: left;
+    height: 40px;
+    line-height: 45px;
+    margin-left: 5px;
+    font-weight: 400;
+}
+
+.headerultools {
+    height: 45px;
+    float: right;
+    color: white;
+    line-height: 45px;
+}
+
+    .headerultools > li {
+        float: left;
+        cursor: pointer;
+    }
+
+.headerlitools_gray {
+    background-color: #555555;
+    overflow: hidden;
+    border-right: 1px solid white;
+    padding: 0px 10px;
+}
+
+    .headerlitools_gray:hover {
+        background-color: #4B4B4B;
+    }
+
+.headerlitoolsspann_gray_number {
+    border-radius: 10px;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    margin: 10px auto 10px 10px;
+    float: right;
+    line-height: 20px;
+    background-color: #A0A0A0;
+}
+
+
+.headerlitools_red {
+    background-color: #892E65;
+    overflow: hidden;
+    padding: 0px 10px;
+    border-right: 1px solid white;
+}
+
+    .headerlitools_red:hover {
+        background-color: #762C59;
+    }
+
+.headerlitoolsspann_red_number {
+    border-radius: 10px;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    margin: 10px auto 10px 10px;
+    float: right;
+    line-height: 20px;
+    background-color: #D15B47;
+}
+
+
+
+.headerlitools_green {
+    background-color: #2E8965;
+    overflow: hidden;
+    padding: 0px 10px;
+    border-right: 1px solid white;
+}
+
+    .headerlitools_green:hover {
+        background-color: #2C7659;
+    }
+
+.headerlitoolsspann_green_number {
+    border-radius: 10px;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    margin: 10px auto 10px 10px;
+    float: right;
+    line-height: 20px;
+    background-color: #82AF6F;
+}
+
+
+/*table*/
