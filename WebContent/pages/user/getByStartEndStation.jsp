@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -57,15 +58,19 @@
 			<th>终点站</th>
 			<th>开车时间</th>
 			<th>到达时间</th>
-			<th>票价</th>
+			<th>票价/元</th>
 			<th>剩余座位数</th>
 			<th>操作</th>
 		</tr>
 		<c:forEach items="${trainList}" var="allTrain">
+		<%-- <fmt:parseDate value="${allTrain.startTime}" var="startTime" pattern="yyyy-MM-dd HH:mm:ss"/>
+		<fmt:parseDate value="${allTrain.endTime}" var="endTime" pattern="yyyy-MM-dd HH:mm:ss"/> --%>
 		<tr>
 			<td>${allTrain.trainNumber}</td>
 			<td>${allTrain.startStation}</td>
 			<td>${allTrain.endStation}</td>
+			<%-- <td><fmt:formatDate value="${startTime}" pattern="yyyy-MM-dd HH:mm"/></td>
+			<td><fmt:formatDate value="${endTime}" pattern="yyyy-MM-dd HH:mm"/></td> --%>
 			<td>${allTrain.startTime}</td>
 			<td>${allTrain.endTime}</td>
 			<td>${allTrain.price}</td>
