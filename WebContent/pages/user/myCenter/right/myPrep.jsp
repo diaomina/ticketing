@@ -19,22 +19,20 @@
 
 <table border="1" cellpadding="8" cellspacing="1">
 		<tr>
-			<th>序号</th>
 			<th>订单编号</th>
 			<th>车次</th>
 			<th>起始站</th>
 			<th>终点站</th>
 			<th>开车时间</th>
 			<th>到达时间</th>
-			<th>票价/元</th>
+			<th>票价</th>
 			<th>付款情况</th>
 			<th>付款</th>
 			<th>改签</th>
 			<th>退票</th>
 		</tr>
-		<c:forEach items="${prepList}" var="prep" varStatus="status">
+		<c:forEach items="${prepList}" var="prep">
 		<tr>
-			<td>${status.index+1}</td>
 			<td>${prep.prepId}</td>
 			<td>${prep.trainNumber}</td>
 			<td>${prep.startStation}</td>
@@ -42,14 +40,7 @@
 			<td>${prep.startTime}</td>
 			<td>${prep.endTime}</td>
 			<td>${prep.price}</td>
-			
-			<c:if test="${prep.way==true}">
-				<td>已付款</td>
-			</c:if>
-			<c:if test="${prep.way==false}">
-				<td>未付款</td>
-			</c:if>
-			
+			<td>${prep.way}</td>
 			<td>
 				<a href="<%=basePath%>PayServlet?prepId=${prep.prepId}">
 				<img alt="" src="<%=basePath%>images/pay.jpg">
