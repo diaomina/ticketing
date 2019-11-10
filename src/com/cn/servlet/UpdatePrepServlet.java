@@ -12,7 +12,11 @@ import com.cn.service.PrepService;
 import com.cn.service.impl.PrepServiceImpl;
 
 /**
- * Servlet implementation class UpdatePrepServlet
+ * 
+ * @ClassName: UpdatePrepServlet 
+ * @Description: 会员 判断是改签还是付款，如果是付款的话实现付款业务，改签的话跳转到ChangePrepServlet
+ * @author: ljy
+ * @date: 2019年11月10日 下午8:24:24
  */
 public class UpdatePrepServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -47,10 +51,10 @@ public class UpdatePrepServlet extends HttpServlet {
 			request.getRequestDispatcher("MyPrepServlet").forward(request, response);
 		}
 		
-		// 改签业务(先将prepId转发到删除订单的servlet，然后跳转到订票界面重新订票)
+		// 改签业务(先将prepId转发到ChangePrepServlet)
 		if(temp == 2) {
 			request.setAttribute("prepId", prepId);
-			request.getRequestDispatcher("DeletePrepServlet").forward(request, response);
+			request.getRequestDispatcher("ChangePrepServlet").forward(request, response);
 		}
 		
 		

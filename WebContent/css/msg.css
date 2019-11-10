@@ -1,0 +1,9 @@
+/**错误信息提醒**/
+.msg{
+    color: #ea8c37;
+    font-size: 14px;
+    padding-left: 40px;
+    padding-top: 10px;
+    clear: both;
+    font-weight: bold;
+}

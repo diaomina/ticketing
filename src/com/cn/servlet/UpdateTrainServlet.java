@@ -13,22 +13,16 @@ import com.cn.service.TrainService;
 import com.cn.service.impl.TrainServiceImpl;
 
 /**
- * Servlet implementation class UpdateTrainServlet
+ * 
+ * @ClassName: UpdateTrainServlet 
+ * @Description: 管理员 修改车次信息
+ * @author: ljy
+ * @date: 2019年11月10日 下午11:49:16
  */
 public class UpdateTrainServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public UpdateTrainServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		/**
 		 * 	将需要修改的车次信息输出到界面
@@ -97,7 +91,6 @@ public class UpdateTrainServlet extends HttpServlet {
 		
 		out.close();
 		
-		// response.sendRedirect("GetAllTrainServlet");
 	}
 
 }

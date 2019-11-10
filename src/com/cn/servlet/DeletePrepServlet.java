@@ -8,78 +8,54 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.cn.domain.Prep;
+import com.cn.domain.Train;
 import com.cn.service.PrepService;
+import com.cn.service.TrainService;
 import com.cn.service.impl.PrepServiceImpl;
-import com.sun.org.apache.regexp.internal.REUtil;
+import com.cn.service.impl.TrainServiceImpl;
 
 /**
  * 
- * @ClassName: DeletePrepServlet 
+ * @ClassName: DeletePrepServlet
  * @Description: 删除订单
  * @author: ljy
  * @date: 2019年9月28日 下午7:25:16
  */
 public class DeletePrepServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public DeletePrepServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
 		PrepService prepService = new PrepServiceImpl();
+		TrainService trainService = new TrainServiceImpl();
 		int recordNumber = 0;
-		
-		Integer prepId = (Integer) request.getAttribute("prepId");
-		if(prepId != null) {
-			// 这是从UpdatePrepServlet过来的，实现改签业务
-			recordNumber = prepService.delete(prepId);
-			
-			PrintWriter out = response.getWriter();
-			if(recordNumber == 1) {
-				// 将改签开始的信息存到session，告知BookingServlet这是改签
-				request.getSession().setAttribute("changePrep", "true");
-				
-				// 跳转
-				out.write("<script>alert('请您选择新的车次！');"
-					    + "window.location.href='GetByStartEndStationServlet'</script>");
-			} else {
-				out.write("<script>alert('很抱歉,改签失败！');"
-					    + "window.location.href='MyPrepServlet'</script>");
-			}
-			
-		} else {
-			// 这是从界面过来的，实现退票业务
-			prepId = Integer.valueOf(request.getParameter("prepId"));
-			recordNumber = prepService.delete(prepId);
-			
-			PrintWriter out = response.getWriter();
-			if(recordNumber == 1) {
-				out.write("<script>alert('退票成功！');"
-				    + "window.location.href='MyPrepServlet'</script>");
-			}else {
-				out.write("<script>alert('很抱歉,退票失败！');"
-					    + "window.location.href='MyPrepServlet'</script>");
-			}
-			
-			out.close();
-			
-		}
-	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		doGet(request, response);
+		// 这是从界面过来的，实现退票业务
+		Integer prepId = Integer.valueOf(request.getParameter("prepId"));
+		
+		// 将订单信息中的trainID先拉取出来，下面更改车次座位数需要
+		Integer trainId = prepService.getById(prepId).getTrainId();
+				
+		// 删除订单
+		recordNumber = prepService.delete(prepId);
+
+		PrintWriter out = response.getWriter();
+		if (recordNumber == 1) {
+			// 座位数+1
+			Train train = trainService.getById(trainId);
+			train.setSeatNumber(train.getSeatNumber() + 1);
+			trainService.update(train);
+
+			out.write("<script>alert('退票成功！');" + "window.location.href='MyPrepServlet'</script>");
+		} else {
+			out.write("<script>alert('很抱歉,退票失败！');" + "window.location.href='MyPrepServlet'</script>");
+		}
+
+		out.close();
+
 	}
 
 }

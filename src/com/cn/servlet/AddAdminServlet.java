@@ -14,30 +14,16 @@ import com.cn.service.impl.AdminServiceImpl;
 import com.cn.util.DateUtil;
 
 /**
- * Servlet implementation class AddAdminServlet
+ * 
+ * @ClassName: AddAdminServlet 
+ * @Description: 管理员  添加管理员操作
+ * @author: ljy
+ * @date: 2019年11月10日 下午11:47:32
  */
 public class AddAdminServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public AddAdminServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String userName = request.getParameter("userName");

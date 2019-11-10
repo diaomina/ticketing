@@ -22,17 +22,7 @@ import com.cn.service.impl.PrepServiceImpl;
 public class UpdatePrepAdminServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public UpdatePrepAdminServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// 获取订单信息转发到修改订单界面
 		Integer prepId = Integer.valueOf(request.getParameter("prepId"));
@@ -46,9 +36,7 @@ public class UpdatePrepAdminServlet extends HttpServlet {
 		
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		// 获取修改界面的数据，将其刷新进数据库
