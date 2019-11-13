@@ -349,4 +349,14 @@
     <servlet-name>AddAdminServlet</servlet-name>
     <url-pattern>/AddAdminServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AlipayServlet</display-name>
+    <servlet-name>AlipayServlet</servlet-name>
+    <servlet-class>com.cn.servlet.AlipayServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AlipayServlet</servlet-name>
+    <url-pattern>/AlipayServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

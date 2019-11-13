@@ -35,25 +35,54 @@ public class PayServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		String temp = request.getParameter("temp");
+		
+		// 判断是否是从支付宝支付接口回跳来的
+		if(temp != null && "1".equals(temp)) {
+			Integer prepId = Integer.valueOf(request.getParameter("prepId"));
+			PrepService prepService = new PrepServiceImpl();
+			Prep prep = prepService.getById(prepId);
+			
+			prep.setWay(true);
+			int recordNumber = prepService.update(prep);
+			
+			PrintWriter out = response.getWriter();
+			if(recordNumber == 1) {
+				out.write("<script>alert('付款成功！');"
+				    + "window.location.href='pages/user/myCenter/myCenter.jsp'</script>");
+			}else {
+				out.write("<script>alert('很抱歉,付款失败！');"
+					    + "window.location.href='MyPrepServlet'</script>");
+			}
+			
+			out.close();
+			
+		}
+		
+		
+		
 		Integer prepId = Integer.valueOf(request.getParameter("prepId"));
 		PrepService prepService = new PrepServiceImpl();
 		Prep prep = prepService.getById(prepId);
 		
-		prep.setWay(true);
-		int recordNumber = prepService.update(prep);
+		// 支付接口调用   start
 		
+		request.setAttribute("prep", prep);
+		request.getRequestDispatcher("AlipayServlet").forward(request, response);
 		
-		PrintWriter out = response.getWriter();
-		if(recordNumber == 1) {
-			out.write("<script>alert('付款成功！');"
-			    + "window.location.href='MyPrepServlet'</script>");
-		}else {
-			out.write("<script>alert('很抱歉,付款失败！');"
-				    + "window.location.href='MyPrepServlet'</script>");
-		}
+		// 支付接口调用   end
 		
-		out.close();
-
+		/*
+		 * prep.setWay(true); int recordNumber = prepService.update(prep);
+		 * 
+		 * PrintWriter out = response.getWriter(); if(recordNumber == 1) {
+		 * out.write("<script>alert('付款成功！');" +
+		 * "window.location.href='MyPrepServlet'</script>"); }else {
+		 * out.write("<script>alert('很抱歉,付款失败！');" +
+		 * "window.location.href='MyPrepServlet'</script>"); }
+		 * 
+		 * out.close();
+		 */
 	}
 
 	/**

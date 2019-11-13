@@ -31,7 +31,6 @@
 		        <li><a href="<%=basePath%>pages/user/home.jsp">首页</a></li>
 		        <li><a href="<%=basePath%>pages/user/myCenter/myCenter.jsp">会员中心</a>
 		        <li><a href="<%=basePath%>pages/user/memberLogin.jsp" target="my_iframe">登录/注册</a></li>
-		        <%-- <li><a href="<%=basePath%>pages/user/memberReg.jsp" target="my_iframe">注册</a></li> --%>
 		        <li><a href="#">退出登录</a></li>
 		    </ul>
 	    </div>
