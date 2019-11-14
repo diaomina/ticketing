@@ -1,14 +1,12 @@
 package com.cn.service.impl;
 
 import java.sql.SQLException;
-import java.util.List;
 
 import org.apache.log4j.Logger;
 
 import com.cn.dao.PmemberDao;
 import com.cn.dao.impl.PmemberDaoImpl;
 import com.cn.domain.Pmember;
-import com.cn.domain.Prep;
 import com.cn.service.PmemberService;
 
 /**

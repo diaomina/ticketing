@@ -14,81 +14,74 @@ import com.cn.service.impl.PrepServiceImpl;
 
 /**
  * 
- * @ClassName: PayServlet 
+ * @ClassName: PayServlet
  * @Description: 用户付款
  * @author: ljy
  * @date: 2019年9月28日 下午10:38:37
  */
 public class PayServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public PayServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
 		String temp = request.getParameter("temp");
-		
+
 		// 判断是否是从支付宝支付接口回跳来的
-		if(temp != null && "1".equals(temp)) {
+		if (temp != null && "1".equals(temp)) {
 			Integer prepId = Integer.valueOf(request.getParameter("prepId"));
 			PrepService prepService = new PrepServiceImpl();
 			Prep prep = prepService.getById(prepId);
-			
+
 			prep.setWay(true);
 			int recordNumber = prepService.update(prep);
-			
+
 			PrintWriter out = response.getWriter();
-			if(recordNumber == 1) {
-				out.write("<script>alert('付款成功！');"
-				    + "window.location.href='pages/user/myCenter/myCenter.jsp'</script>");
-			}else {
-				out.write("<script>alert('很抱歉,付款失败！');"
-					    + "window.location.href='MyPrepServlet'</script>");
+			if (recordNumber == 1) {
+				out.write(
+						"<script>alert('付款成功！');" + "window.location.href='pages/user/myCenter/myCenter.jsp'</script>");
+			} else {
+				out.write("<script>alert('很抱歉,付款失败！');" + "window.location.href='MyPrepServlet'</script>");
 			}
-			
+
 			out.close();
-			
+
 		}
-		
-		
-		
+
 		Integer prepId = Integer.valueOf(request.getParameter("prepId"));
 		PrepService prepService = new PrepServiceImpl();
 		Prep prep = prepService.getById(prepId);
-		
-		// 支付接口调用   start
-		
+
+		// 支付接口调用 start
+
 		request.setAttribute("prep", prep);
 		request.getRequestDispatcher("AlipayServlet").forward(request, response);
+
+		// 支付接口调用 end
+
 		
-		// 支付接口调用   end
+		/* 沙箱服务器在每周日12点至周一12点维护，如调用接口失效 ，1.将本段解除注释，2.将 上面代码全部注释
+		Integer prepId = Integer.valueOf(request.getParameter("prepId")); PrepService
+		prepService = new PrepServiceImpl(); 
+		Prep prep = prepService.getById(prepId); 
+		prep.setWay(true); int recordNumber = prepService.update(prep);
 		
-		/*
-		 * prep.setWay(true); int recordNumber = prepService.update(prep);
-		 * 
-		 * PrintWriter out = response.getWriter(); if(recordNumber == 1) {
-		 * out.write("<script>alert('付款成功！');" +
-		 * "window.location.href='MyPrepServlet'</script>"); }else {
-		 * out.write("<script>alert('很抱歉,付款失败！');" +
-		 * "window.location.href='MyPrepServlet'</script>"); }
-		 * 
-		 * out.close();
-		 */
+		PrintWriter out = response.getWriter(); 
+		if(recordNumber == 1) {
+			out.write("<script>alert('付款成功！');" +
+				"window.location.href='MyPrepServlet'</script>"); 
+		} else {
+			out.write("<script>alert('很抱歉,付款失败！');" +
+				"window.location.href='MyPrepServlet'</script>"); }
+		
+		out.close();
+		*/
+		
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}

@@ -359,4 +359,14 @@
     <servlet-name>AlipayServlet</servlet-name>
     <url-pattern>/AlipayServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>MemberLoginOutServlet</display-name>
+    <servlet-name>MemberLoginOutServlet</servlet-name>
+    <servlet-class>com.cn.servlet.MemberLoginOutServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MemberLoginOutServlet</servlet-name>
+    <url-pattern>/MemberLoginOutServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
