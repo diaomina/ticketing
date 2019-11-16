@@ -25,7 +25,7 @@ import com.cn.service.impl.TrainServiceImpl;
 /**
  * 
  * @ClassName: BookingServlet 
- * @Description: 实现订票功能的Servlet
+ * @Description: 会员  实现订票功能的Servlet
  * @author: ljy
  * @date: 2019年9月17日 下午11:23:41
  */

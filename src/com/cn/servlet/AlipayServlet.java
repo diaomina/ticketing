@@ -24,17 +24,7 @@ import com.cn.domain.Prep;
 public class AlipayServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public AlipayServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String URL = "https://openapi.alipaydev.com/gateway.do";	//沙箱环境使用
 		//String URL = "https://openapi.alipay.com/gateway.do"; 	//外网真实环境使用
@@ -53,8 +43,9 @@ public class AlipayServlet extends HttpServlet {
         String out_trade_no = String.valueOf(new Date()) + String.valueOf(prep.getPrepId());  // 商户订单号，商户网站订单系统中唯一订单号，必填
         String total_amount = String.valueOf(prep.getPrice())+".00";  // 付款金额，必填
         String subject = prep.getStartStation()+"站 - "+prep.getEndStation() + "站    火车票";  // 商品名称
-        String returnUrl = "http://localhost:8080/ticketing/PayServlet?temp=1&prepId="+prep.getPrepId()+""; // 回跳地址
-
+        //String returnUrl = "http://localhost:8080/ticketing/PayServlet?temp=1&prepId="+prep.getPrepId()+""; // 回跳地址
+        String returnUrl = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+"/ticketing/PayServlet?temp=1&prepId="+prep.getPrepId()+"";
+        
 		AlipayClient alipayClient = new DefaultAlipayClient(URL, APP_ID, APP_PRIVATE_KEY, FORMAT, CHARSET, ALIPAY_PUBLIC_KEY, SIGN_TYPE); // 获得初始化的AlipayClient
 		AlipayTradePagePayRequest alipayRequest = new AlipayTradePagePayRequest();// 创建API对应的request
 		alipayRequest.setReturnUrl(returnUrl);

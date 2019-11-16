@@ -13,22 +13,16 @@ import com.cn.service.PrepService;
 import com.cn.service.impl.PrepServiceImpl;
 
 /**
- * Servlet implementation class GetAllPrepServlet
+ * 
+ * @ClassName: GetAllPrepServlet 
+ * @Description: 管理员  订单中心
+ * @author: ljy
+ * @date: 2019年11月16日 下午7:44:25
  */
 public class GetAllPrepServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public GetAllPrepServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		PrepService prepService = new PrepServiceImpl();
 		List<Prep> prepList = prepService.getAll();
@@ -36,12 +30,6 @@ public class GetAllPrepServlet extends HttpServlet {
 		request.getRequestDispatcher("pages/admin/right/prepCenter.jsp").forward(request, response);
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
-	}
+
 
 }

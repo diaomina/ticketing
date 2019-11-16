@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -46,8 +47,15 @@
 			<td>${prep.startTime}</td>
 			<td>${prep.endTime}</td>
 			<td>${prep.price}</td>
-			<td>${prep.way}</td>
-			<td>${prep.booktime}</td>
+			<c:if test="${prep.way == true}">
+				<td>已付款</td>
+			</c:if>
+			<c:if test="${prep.way == false}">
+				<td style="color:red">未付款</td>
+			</c:if>
+			<td>
+				<fmt:formatDate value="${prep.booktime}" pattern="yyyy-MM-dd HH:mm:ss"/>
+			</td>
 			<td>
 				<a href="<%=basePath%>UpdatePrepAdminServlet?prepId=${prep.prepId}">
 				<img alt="" src="<%=basePath%>images/update.jpg">

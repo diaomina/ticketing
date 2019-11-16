@@ -40,7 +40,12 @@
 			<td>${prep.startTime}</td>
 			<td>${prep.endTime}</td>
 			<td>${prep.price}</td>
-			<td>${prep.way}</td>
+			<c:if test="${prep.way == true}">
+				<td>已付款</td>
+			</c:if>
+			<c:if test="${prep.way == false}">
+				<td style="color:red">未付款</td>
+			</c:if>
 			<td>
 				<a href="<%=basePath%>PayServlet?prepId=${prep.prepId}">
 				<img alt="" src="<%=basePath%>images/pay.jpg">

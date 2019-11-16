@@ -15,7 +15,7 @@ import com.cn.service.impl.PrepServiceImpl;
 /**
  * 
  * @ClassName: UpdatePrepAdminServlet 
- * @Description: 管理员修改订单
+ * @Description: 管理员 修改订单
  * @author: ljy
  * @date: 2019年9月28日 下午7:38:31
  */
