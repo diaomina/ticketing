@@ -22,9 +22,7 @@
     <li><a href="<%=basePath%>MemberCenterServlet" target="right">会员中心</a> </li>
     <li><a href="<%=basePath%>pages/admin/right/addMember.jsp" target="right">添加会员</a> </li>
     <li><a href="<%=basePath%>GetAllPrepServlet" target="right">订单中心</a> </li>
-    <li><a href="#" target="right">销售情况</a> </li>
-    <li><a href="#" target="right">发布新闻</a> </li>
-    <li><a href="#" target="right">会员来信</a> </li>
+    <li><a href="<%=basePath%>CountPrepServlet" target="right">销售统计</a> </li>
 </ul>
 </body>
 </html>
