@@ -43,7 +43,7 @@
 ### 6、修改密码  
 ![修改密码](https://github.com/daiomina/images/blob/master/ticketing/%E4%BC%9A%E5%91%98%E6%A8%A1%E5%9D%97/%E4%BF%AE%E6%94%B9%E5%AF%86%E7%A0%81.jpg?raw=true)  
 ### 7、我的订单  
-![我的订单]https://github.com/daiomina/images/blob/master/ticketing/%E4%BC%9A%E5%91%98%E6%A8%A1%E5%9D%97/%E6%88%91%E7%9A%84%E8%AE%A2%E5%8D%95.jpg?raw=true)  
+![我的订单](https://github.com/daiomina/images/blob/master/ticketing/%E4%BC%9A%E5%91%98%E6%A8%A1%E5%9D%97/%E6%88%91%E7%9A%84%E8%AE%A2%E5%8D%95.jpg?raw=true)  
 ### 8、付款  
 ![付款](https://github.com/daiomina/images/blob/master/ticketing/%E4%BC%9A%E5%91%98%E6%A8%A1%E5%9D%97/%E4%BB%98%E6%AC%BE.jpg?raw=true)  
 
