@@ -47,10 +47,10 @@ public class AddAdminServlet extends HttpServlet {
 			int recordNumber = adminService.addAdmin(admin);
 			if(recordNumber == 1) {
 				out.write("<script>alert('添加管理员成功！');"
-						+ "window.location.href='pages/admin/right/addAdmin.jsp'</script>");
+						+ "window.location.href='GetAllAdminServlet'</script>");
 			} else {
 				out.write("<script>alert('添加管理员失败！');"
-						+ "window.location.href='pages/admin/right/addAdmin.jsp'</script>");
+						+ "window.location.href='GetAllAdminServlet'</script>");
 			}
 			
 		} else {

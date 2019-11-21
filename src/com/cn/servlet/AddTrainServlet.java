@@ -85,7 +85,7 @@ public class AddTrainServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		if(recordNumber == 1) {
 			out.write("<script>alert('添加成功！');"
-			    + "window.location.href='pages/admin/right/addTrain.jsp'</script>");
+			    + "window.location.href='GetAllTrainServlet'</script>");
 		}else {
 			out.write("<script>alert('很抱歉,添加失败！');"
 				    + "window.location.href='pages/admin/right/addTrain.jsp'</script>");

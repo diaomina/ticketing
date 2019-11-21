@@ -379,4 +379,14 @@
     <servlet-name>CountPrepServlet</servlet-name>
     <url-pattern>/CountPrepServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>GetAllAdminServlet</display-name>
+    <servlet-name>GetAllAdminServlet</servlet-name>
+    <servlet-class>com.cn.servlet.GetAllAdminServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetAllAdminServlet</servlet-name>
+    <url-pattern>/GetAllAdminServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

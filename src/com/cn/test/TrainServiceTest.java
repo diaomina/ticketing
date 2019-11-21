@@ -44,6 +44,32 @@ public class TrainServiceTest {
 			e.printStackTrace();
 		}
 	}
+	
+	@Test
+	public void testBatchAdd() {
+		for(int i=1; i<=300; i++) {
+			Train train = new Train();
+			train.setTrainNumber("K3"+i);
+			train.setStartStation("北京"+i);
+			train.setEndStation("天津"+i);
+			train.setStartTime("2020-01-01 15:30:00");
+			train.setEndTime("2020-01-02 16:50:00");
+			train.setPrice(200+i);
+			train.setSeatNumber(1000+i);
+			
+//			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+//			Timestamp addTime = Timestamp.valueOf(sdf.format(new Date()));
+			Timestamp addTime = new Timestamp(new Date().getTime());
+			train.setAddTime(addTime);
+			int recordNumber = 0;
+			try {
+				recordNumber = trainService.add(train);
+				System.out.println(recordNumber);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+	}
 
 	@Test
 	public void testDelete() {

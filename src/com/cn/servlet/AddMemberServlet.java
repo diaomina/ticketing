@@ -85,7 +85,7 @@ public class AddMemberServlet extends HttpServlet {
 				PmemberService pmemberService = new PmemberServiceImpl();
 				pmemberService.add(pmember);
 				
-				out.write("<script>alert('添加会员成功！');window.location.href='pages/admin/right/addMember.jsp'</script>");
+				out.write("<script>alert('添加会员成功！');window.location.href='MemberCenterServlet'</script>");
 			} else {
 				out.write("<script>alert('添加会员失败！');window.location.href='pages/admin/right/addMember.jsp'</script>");
 			}

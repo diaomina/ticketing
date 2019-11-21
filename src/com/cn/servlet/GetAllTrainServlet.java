@@ -42,7 +42,6 @@ public class GetAllTrainServlet extends HttpServlet {
 			System.out.println("没有任何站点信息");
 		}
 		
-		//request.getRequestDispatcher("newpages//inbound.jsp").forward(request, response);
 		request.getRequestDispatcher("pages/admin/right/getAllTrain.jsp").forward(request, response);
 	}
 

@@ -19,35 +19,32 @@
 		}
 	</style>
 	
-	<%-- <link rel="stylesheet" href="<%=basePath%>css/style.css" type="text/css" > --%>
 	<link rel="stylesheet" href="<%=basePath%>css/home-menu.css" type="text/css" >
+	<link rel="stylesheet" type="text/css" href="<%=basePath%>static/h-ui/css/H-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="<%=basePath%>static/h-ui.admin/css/H-ui.admin.css" />
+	<link rel="stylesheet" type="text/css" href="<%=basePath%>lib/Hui-iconfont/1.0.8/iconfont.css" />
+	<link rel="stylesheet" type="text/css" href="<%=basePath%>static/h-ui.admin/skin/default/skin.css" id="skin" />
+	<link rel="stylesheet" type="text/css" href="<%=basePath%>static/h-ui.admin/css/style.css" />
+	
 </head>
-
 	 	<!-- 首页顶部导航栏start  -->
+	 	<header class="navbar-wrapper">
 	    <div id="head">
-		    <ul id="menu" style="margin:0 auto; width: 60%;">
-		        <%-- <li><a href="<%=basePath%>pages/user/home.jsp"><img alt="" src="<%=basePath%>/images/home.jpg"></a></li> --%>
-		        <li style="width:520px;"><a href="<%=basePath%>pages/user/home.jsp">火车站售票系统</a></li>
-		        <li><a href="<%=basePath%>pages/user/home.jsp">首页</a></li>
-		        <li><a href="<%=basePath%>pages/user/myCenter/myCenter.jsp">会员中心</a>
-		        <li><a href="<%=basePath%>pages/user/memberLogin.jsp" target="my_iframe">登录/注册</a></li>
-		        <li><a href="<%=basePath%>MemberLoginOutServlet">退出登录</a></li>
-		    </ul>
-	    </div>
 	    
-	     <iframe name="my_iframe" id="my_iframe" src="<%=basePath%>GetByStartEndStationServlet" width="60%" height="700px" seamless="seamless"></iframe>
+		    <ul id="menu" style="margin:0 auto; width: 60%;">
+		        <li style="width:530px; display:inline"><a href="<%=basePath%>pages/user/home.jsp">火车站售票系统</a></li>
+		        <li style="display:inline"><a href="<%=basePath%>pages/user/home.jsp">首页</a></li>
+		        <li style="display:inline"><a href="<%=basePath%>pages/user/myCenter/myCenter.jsp">会员中心</a>
+		        <li style="display:inline"><a href="<%=basePath%>pages/user/memberLogin.jsp" target="my_iframe">登录/注册</a></li>
+		        <li style="display:inline"><a href="<%=basePath%>MemberLoginOutServlet">退出登录</a></li>
+		    </ul>
+		    
+		</div>
+		</header>
+	    
+	    <iframe name="my_iframe" id="my_iframe" src="<%=basePath%>GetByStartEndStationServlet" width="60%" height="800px" seamless="seamless"></iframe>
 	    <!-- 首页顶部导航栏end  -->
 	    
 	    
-	    
-
-
-
-
-<%-- 	<frameset rows="10%,90%" frameborder="1" border="1" noresize="noresize"><!--窗口-->
-		<frame src="<%=basePath%>pages/user/top.jsp">
-		<frame src="<%=basePath%>GetByStartEndStationServlet">
-		<frame src="<%=basePath%>pages/user/bottom.jsp">
-	</frameset> --%>
 
 </html>
