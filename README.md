@@ -42,7 +42,9 @@ QQ：1321721473
 ![车次管理](https://github.com/diaomina/project-images/blob/master/ticketing/2.0/%E7%AE%A1%E7%90%86%E5%91%98%E6%A8%A1%E5%9D%97/%E8%BD%A6%E6%AC%A1%E7%AE%A1%E7%90%86.jpg?raw=true)  
 ### 9、订单中心  
 ![订单中心](https://github.com/diaomina/project-images/blob/master/ticketing/2.0/%E7%AE%A1%E7%90%86%E5%91%98%E6%A8%A1%E5%9D%97/%E8%AE%A2%E5%8D%95%E4%B8%AD%E5%BF%83.jpg?raw=true)  
-### 10、销售统计  
+### 10、导出Excel  
+![导出Excel](https://github.com/diaomina/project-images/blob/master/ticketing/2.0/%E7%AE%A1%E7%90%86%E5%91%98%E6%A8%A1%E5%9D%97/%E5%AF%BC%E5%87%BAExcel.jpg?raw=true)  
+### 11、销售统计  
 ![销售统计](https://github.com/diaomina/project-images/blob/master/ticketing/2.0/%E7%AE%A1%E7%90%86%E5%91%98%E6%A8%A1%E5%9D%97/%E9%94%80%E5%94%AE%E7%BB%9F%E8%AE%A1.jpg?raw=true)  
 
 
