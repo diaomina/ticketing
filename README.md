@@ -70,12 +70,12 @@ QQ：1321721473
 
 ### 9、付款  
 
-![付款](https://github.com/daiomina/images/blob/master/ticketing/%E4%BC%9A%E5%91%98%E6%A8%A1%E5%9D%97/%E4%BB%98%E6%AC%BE.jpg?raw=true)  
+![付款](https://github.com/diaomina/project-images/blob/master/ticketing/2.0/%E4%BC%9A%E5%91%98%E6%A8%A1%E5%9D%97/%E4%BB%98%E6%AC%BE.jpg?raw=true)  
 
-10、改签
+### 10、改签
 
 ![改签](https://github.com/diaomina/project-images/blob/master/ticketing/2.0/%E4%BC%9A%E5%91%98%E6%A8%A1%E5%9D%97/%E6%94%B9%E7%AD%BE.jpg?raw=true)
 
-11、退票
+### 11、退票
 
 ![退票](https://github.com/diaomina/project-images/blob/master/ticketing/2.0/%E4%BC%9A%E5%91%98%E6%A8%A1%E5%9D%97/%E9%80%80%E7%A5%A8.jpg?raw=true)
