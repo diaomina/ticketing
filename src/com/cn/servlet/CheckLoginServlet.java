@@ -21,11 +21,9 @@ import com.cn.domain.Member;
 public class CheckLoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession();
 		Member member = (Member) session.getAttribute("member");
-		
 		String temp = request.getParameter("temp");
 
 		// 判断是否已经登录
