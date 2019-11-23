@@ -19,5 +19,8 @@
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/log4j-1.2.15.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/servlet-api.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/mysql-connector-java-3.1.10-bin.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/hutool-all-5.0.6.jar" sourcepath="E:/maven-repository/cn/hutool/hutool-all/5.0.6/hutool-all-5.0.6-sources.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/poi-ooxml-4.0.1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/poi-4.0.1.jar" sourcepath="E:/maven-repository/org/apache/poi/poi/4.0.1/poi-4.0.1-sources.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

@@ -17,6 +17,8 @@ import com.cn.service.impl.AdminServiceImpl;
 import com.cn.service.impl.MemberServiceImpl;
 import com.cn.util.DateUtil;
 
+import cn.hutool.crypto.SecureUtil;
+
 /**
  * 
  * @ClassName: MemberLoginServlet
@@ -32,6 +34,10 @@ public class MemberLoginServlet extends HttpServlet {
 			throws ServletException, IOException {
 		String userName = request.getParameter("userName");
 		String passWord = request.getParameter("passWord");
+		
+		// md5加密
+		//String passWord = SecureUtil.md5(passwd);
+		
 
 		AdminService adminService = new AdminServiceImpl();
 		Admin admin = adminService.getAdminByName(userName);

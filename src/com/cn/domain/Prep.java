@@ -12,7 +12,7 @@ import java.sql.Timestamp;
 public class Prep {
 	private Integer prepId;		//序号
 	private Integer trainId;	//车次id
-	private Integer pmemberId;	//会员信息ID
+	private Integer pmemberId;	//会员资料ID
 	private String startStation;//起始站
 	private String endStation;	//终点站
 	private String trainNumber;	//火车车次

@@ -399,4 +399,14 @@
     <servlet-name>CheckLoginServlet</servlet-name>
     <url-pattern>/CheckLoginServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ExportExcelServlet</display-name>
+    <servlet-name>ExportExcelServlet</servlet-name>
+    <servlet-class>com.cn.servlet.ExportExcelServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ExportExcelServlet</servlet-name>
+    <url-pattern>/ExportExcelServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

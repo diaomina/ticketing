@@ -18,12 +18,17 @@ import com.cn.service.impl.MemberServiceImpl;
 import com.cn.service.impl.PmemberServiceImpl;
 import com.cn.util.DateUtil;
 
+import cn.hutool.crypto.SecureUtil;
+
 public class RegMemberServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String userName = request.getParameter("username");
 		String password = request.getParameter("password");
+		
+		// md5加密
+		//String password = SecureUtil.md5(passwd);
 		
 		
 		MemberDao memberDao = new MemberDaoImpl();
