@@ -66,7 +66,7 @@ public class ExportExcelServlet extends HttpServlet {
 		writer.addHeaderAlias("booktime", "订票时间");
 		
 		// 合并单元格后的标题行，使用默认标题样式
-		writer.merge(11, "订单中心");
+		writer.merge(10, "订单中心");
 		// 一次性写出内容，使用默认样式，强制输出标题
 		writer.write(rows, true);
 		
