@@ -389,4 +389,14 @@
     <servlet-name>GetAllAdminServlet</servlet-name>
     <url-pattern>/GetAllAdminServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CheckLoginServlet</display-name>
+    <servlet-name>CheckLoginServlet</servlet-name>
+    <servlet-class>com.cn.servlet.CheckLoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CheckLoginServlet</servlet-name>
+    <url-pattern>/CheckLoginServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

@@ -34,7 +34,7 @@
 		    <ul id="menu" style="margin:0 auto; width: 60%;">
 		        <li style="width:530px; display:inline"><a href="<%=basePath%>pages/user/home.jsp">火车站售票系统</a></li>
 		        <li style="display:inline"><a href="<%=basePath%>pages/user/home.jsp">首页</a></li>
-		        <li style="display:inline"><a href="<%=basePath%>pages/user/myCenter/myCenter.jsp">会员中心</a>
+		        <li style="display:inline"><a href="<%=basePath%>CheckLoginServlet?temp=1">会员中心</a>
 		        <li style="display:inline"><a href="<%=basePath%>pages/user/memberLogin.jsp" target="my_iframe">登录/注册</a></li>
 		        <li style="display:inline"><a href="<%=basePath%>MemberLoginOutServlet">退出登录</a></li>
 		    </ul>

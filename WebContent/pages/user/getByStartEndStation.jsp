@@ -79,7 +79,7 @@
 				<td>${allTrain.endTime}</td>
 				<td>${allTrain.price}</td>
 				<td>${allTrain.seatNumber}</td>
-				<td><a href="<%=basePath%>BookingServlet?trainId=${allTrain.trainId}">订票</a></td>
+				<td><a href="<%=basePath%>CheckLoginServlet?trainId=${allTrain.trainId}&temp=2">订票</a></td>
 			</tr>
 			</c:forEach>
 			</tbody>

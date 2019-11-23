@@ -40,27 +40,20 @@ public class BookingServlet extends HttpServlet {
 			 */
 			HttpSession session = request.getSession();
 			Member member = (Member) session.getAttribute("member");
-			// 判断当前会员是否登录
-			if(member != null) {
-				Integer trainId = Integer.valueOf(request.getParameter("trainId"));
-				TrainService trainService = new TrainServiceImpl();
-				Train train = trainService.getById(trainId);
-				// 根据会员ID获取会员个人信息
-				Integer memberId = member.getMemberId(); // 从Session中获取
-				PmemberService pmemberService = new PmemberServiceImpl();
-				Pmember pmember = pmemberService.getPmemberByMemberId(memberId);
-				
-				// 将数据转发到界面
-				request.setAttribute("train", train);
-				request.setAttribute("pmember", pmember);
-				request.getRequestDispatcher("pages/user/booking.jsp").forward(request, response);
-			} else {
-				// 没有登录，跳转到会员登录界面
-				PrintWriter out = response.getWriter();
-				out.write("<script>alert('您还没有登录，请先登录！');window.location.href='pages/user/memberLogin.jsp'</script>");
-				//response.sendRedirect("pages/user/memberLogin.jsp");
-				out.close();
-			}
+
+			Integer trainId = (Integer) request.getAttribute("trainId");
+			TrainService trainService = new TrainServiceImpl();
+			Train train = trainService.getById(trainId);
+			// 根据会员ID获取会员个人信息
+			Integer memberId = member.getMemberId(); // 从Session中获取
+			PmemberService pmemberService = new PmemberServiceImpl();
+			Pmember pmember = pmemberService.getPmemberByMemberId(memberId);
+			
+			// 将数据转发到界面
+			request.setAttribute("train", train);
+			request.setAttribute("pmember", pmember);
+			request.getRequestDispatcher("pages/user/booking.jsp").forward(request, response);
+
 	}
 
 
