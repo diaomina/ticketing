@@ -1,14 +1,12 @@
 package com.cn.dao.impl;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
-
-import org.apache.commons.dbutils.DbUtils;
-import org.apache.commons.dbutils.QueryRunner;
-import org.apache.commons.dbutils.handlers.BeanHandler;
-import org.apache.commons.dbutils.handlers.BeanListHandler;
 
 import com.cn.dao.MemberDao;
 import com.cn.domain.Member;
@@ -23,86 +21,117 @@ import com.cn.util.JDBCUtil;
  */
 public class MemberDaoImpl implements MemberDao {
 	private Connection conn = null;
-	private QueryRunner queryRunner = null;
+	private PreparedStatement pstmt = null;
+	private ResultSet rs;
 
 	@Override
 	public int add(Member member) throws SQLException {
-		int status = 0;
-		conn = JDBCUtil.getConnection();
-		queryRunner = new QueryRunner();
 		String sql = "insert into member(username,password,registertime,ifuse,logintimes) values(?,?,?,?,?)";
-		status = queryRunner.update(conn, sql, member.getUserName(), member.getPassword(), member.getRegisterTime(),
-				member.getIfUse(), member.getLogintimes());
-		DbUtils.close(conn);
+		conn = JDBCUtil.getConnection();
+		pstmt = conn.prepareStatement(sql);
+		pstmt.setObject(1, member.getUserName());
+		pstmt.setObject(2, member.getPassword());
+		pstmt.setObject(3, member.getRegisterTime());
+		pstmt.setObject(4, member.getIfUse());
+		pstmt.setObject(5, member.getLogintimes());
+		int status = pstmt.executeUpdate();
+		pstmt.close();
+		conn.close();
 		return status;
 	}
 
 	@Override
 	public int delete(int memberId) throws SQLException {
-		int status = 0;
-		conn = JDBCUtil.getConnection();
-		queryRunner = new QueryRunner();
 		String sql = "delete from member where memberid=?";
-		status = queryRunner.update(conn, sql, memberId);
-		DbUtils.close(conn);
+		conn = JDBCUtil.getConnection();
+		pstmt = conn.prepareStatement(sql);
+		pstmt.setObject(1, memberId);
+		int status = pstmt.executeUpdate();
+		pstmt.close();
+		conn.close();
 		return status;
 	}
 
-	/*
 	@Override
 	public int update(Member member) throws SQLException {
-		int status = 0;
-		conn = JDBCUtil.getConnection();
-		queryRunner = new QueryRunner();
-		String sql = "alter table member set username=?,password=?,ifuse=?,logintimes=? where memberid=?";
-		status = queryRunner.update(conn, sql, member.getUserName(), member.getPassword(), member.getIfUse(), member.getLogintimes(), member.getMemberId());
-		DbUtils.close(conn);
-		return status;
-	}
-	*/
-	
-	// 2019.9.28 ljy 修改了sql语句，改为update
-	@Override
-	public int update(Member member) throws SQLException {
-		int status = 0;
-		conn = JDBCUtil.getConnection();
-		queryRunner = new QueryRunner();
 		String sql = "update member set username=?,password=?,ifuse=?,logintimes=? where memberid=?";
-		status = queryRunner.update(conn, sql, member.getUserName(), member.getPassword(), member.getIfUse(), member.getLogintimes(), member.getMemberId());
-		DbUtils.close(conn);
+		conn = JDBCUtil.getConnection();
+		pstmt = conn.prepareStatement(sql);
+		pstmt.setObject(1, member.getUserName());
+		pstmt.setObject(2, member.getPassword());
+		pstmt.setObject(3, member.getIfUse());
+		pstmt.setObject(4, member.getLogintimes());
+		pstmt.setObject(5, member.getMemberId());
+		int status = pstmt.executeUpdate();
+		pstmt.close();
+		conn.close();
 		return status;
 	}
 
 	@Override
 	public List<Member> getAll() throws SQLException {
-		List<Member> list = new ArrayList<Member>();
-		conn = JDBCUtil.getConnection();
-		queryRunner = new QueryRunner();
 		String sql = "select * from member";
-		list = queryRunner.query(conn, sql, new BeanListHandler<Member>(Member.class));
-		DbUtils.close(conn);
-		return list;
+		conn = JDBCUtil.getConnection();
+		pstmt = conn.prepareStatement(sql);
+		rs = pstmt.executeQuery();
+		List<Member> members = new ArrayList<Member>();
+		while (rs.next()) {
+			int memberId = rs.getInt("memberId");
+			String userName = rs.getString("userName");
+			String password = rs.getString("password");
+			Timestamp registerTime = rs.getTimestamp("registerTime");
+			int ifUse = rs.getInt("ifUse");
+			Timestamp logintimes = rs.getTimestamp("logintimes");
+			Member member = new Member(memberId, userName, password, registerTime, ifUse, logintimes);
+			members.add(member);
+		}
+		rs.close();
+		pstmt.close();
+		conn.close();
+		return members;
 	}
 
 	@Override
 	public Member getMemberById(int memberId) throws SQLException {
-		Member member = new Member();
-		conn = JDBCUtil.getConnection();
-		queryRunner = new QueryRunner();
 		String sql = "select * from member where memberid=?";
-		member = queryRunner.query(conn, sql, new BeanHandler<Member>(Member.class), memberId);
-		DbUtils.close(conn);
+		conn = JDBCUtil.getConnection();
+		pstmt = conn.prepareStatement(sql);
+		pstmt.setObject(1, memberId);
+		rs = pstmt.executeQuery();
+		Member member = null;
+		while(rs.next()) {
+			String userName = rs.getString("userName");
+			String password = rs.getString("password");
+			Timestamp registerTime = rs.getTimestamp("registerTime");
+			int ifUse = rs.getInt("ifUse");
+			Timestamp logintimes = rs.getTimestamp("logintimes");
+			member = new Member(memberId, userName, password, registerTime, ifUse, logintimes);
+		}
+		rs.close();
+		pstmt.close();
+		conn.close();
 		return member;
 	}
 
 	@Override
 	public Member getMemberByName(String userName) throws SQLException {
-		Member member = new Member();
-		conn = JDBCUtil.getConnection();
-		queryRunner = new QueryRunner();
 		String sql = "select * from member where username=?";
-		member = queryRunner.query(conn, sql, new BeanHandler<Member>(Member.class), userName);
-		DbUtils.close(conn);
+		conn = JDBCUtil.getConnection();
+		pstmt = conn.prepareStatement(sql);
+		pstmt.setObject(1, userName);
+		rs = pstmt.executeQuery();
+		Member member = null;
+		while(rs.next()) {
+			int memberId = rs.getInt("memberId");
+			String password = rs.getString("password");
+			Timestamp registerTime = rs.getTimestamp("registerTime");
+			int ifUse = rs.getInt("ifUse");
+			Timestamp logintimes = rs.getTimestamp("logintimes");
+			member = new Member(memberId, userName, password, registerTime, ifUse, logintimes);
+		}
+		rs.close();
+		pstmt.close();
+		conn.close();
 		return member;
 	}
 

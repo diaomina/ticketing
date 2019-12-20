@@ -30,39 +30,44 @@ public class RegMemberServlet extends HttpServlet {
 		// md5加密
 		//String password = SecureUtil.md5(passwd);
 		
+        PrintWriter out = response.getWriter();
 		
 		MemberDao memberDao = new MemberDaoImpl();
 		MemberService memberService = new MemberServiceImpl(memberDao);
 		
-		//////////校验用户名是否已经存在，待写/////////
-		
-		Member member = new Member(userName, password, DateUtil.now(), 0, DateUtil.now());
-		int countNumber = memberService.addMember(member);
-		
-		PrintWriter out = response.getWriter();
-		if(countNumber == 1) {
+		//校验用户名是否已经存在
+		if(memberService.getMemberByName(userName) == null) {
+			// 不存在，可以创建
+		    Member member = new Member(userName, password, DateUtil.now(), 0, DateUtil.now());
+		    int countNumber = memberService.addMember(member);
+		    
+		    if(countNumber == 1) {
 			
-			// 将个人信息存储到pmember
-			Pmember pmember = new Pmember();
-			Integer memberId = memberService.getMemberByName(userName).getMemberId();
-			pmember.setMemberId(memberId);
+			    // 将个人信息存储到pmember
+			    Pmember pmember = new Pmember();
+			    Integer memberId = memberService.getMemberByName(userName).getMemberId();
+			    pmember.setMemberId(memberId);
 			
-			String realName = request.getParameter("realName");
-			String sex = request.getParameter("sex");
-			Integer age = Integer.valueOf(request.getParameter("age"));
-			String idCard = request.getParameter("idCard");
+			    String realName = request.getParameter("realName");
+			    String sex = request.getParameter("sex");
+			    Integer age = Integer.valueOf(request.getParameter("age"));
+			    String idCard = request.getParameter("idCard");
 			
-			pmember.setRealName(realName);
-			pmember.setSex(sex);
-			pmember.setAge(age);
-			pmember.setIdCard(idCard);
+			    pmember.setRealName(realName);
+			    pmember.setSex(sex);
+			    pmember.setAge(age);
+			    pmember.setIdCard(idCard);
 			
-			PmemberService pmemberService = new PmemberServiceImpl();
-			pmemberService.add(pmember);
+			    PmemberService pmemberService = new PmemberServiceImpl();
+			    pmemberService.add(pmember);
 			
-			out.write("<script>alert('注册成功，点击登录！');window.location.href='pages/user/memberLogin.jsp'</script>");
-		} else {
-			out.write("<script>alert('注册失败！');window.location.href='pages/user/memberReg.jsp'</script>");
+			    out.write("<script>alert('注册成功，点击登录！');window.location.href='pages/user/memberLogin.jsp'</script>");
+		    } else {
+			    out.write("<script>alert('注册失败！');window.location.href='pages/user/memberReg.jsp'</script>");
+		    } 
+        } else {
+			// 存在
+			out.write("<script>alert('用户名已存在，请重新输入！');window.location.href='pages/admin/right/addMember.jsp'</script>");
 		}
 		out.close();
 	}
