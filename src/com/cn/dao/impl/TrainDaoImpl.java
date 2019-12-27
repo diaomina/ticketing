@@ -172,7 +172,7 @@ public class TrainDaoImpl implements TrainDao {
 	@Override
 	public List<Train> getByStartEndStation(String startStation, String endStation, String startTime)
 			throws SQLException {
-		String sql = "select * from train where startStation=? and endStation=? and startTime like \\\"%\\\"?\\\"%\\\"";
+		String sql = "select * from train where startStation=? and endStation=? and startTime like \"%\"?\"%\"";
 		conn = JDBCUtil.getConnection();
 		pstmt = conn.prepareStatement(sql);
 		pstmt.setObject(1, startStation);
