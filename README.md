@@ -13,6 +13,10 @@
 
 本项目适合初学JavaWeb的同学练习，有好的建议或者不明白的地方欢迎联系，需要数据库脚本的可以留下邮箱(已经上传到sql目录下)。
 
+觉得对你有帮助的话请作者喝杯咖啡趴~Thanks♪(･ω･)ﾉ
+
+![微信收款码](https://ghproxy.fsou.cc/https://github.com/diaomina/project-images/blob/master/41E0ED1A-F2AD-4DE5-A92A-F5ED31ABEB77.jpeg)
+
 #### 体验地址  
   [点这里](http://39.108.5.98/ticketing/)  （已失效）
 #### 测试账户  
