@@ -18,7 +18,7 @@
 ![微信收款码](https://cdn.jsdelivr.net/gh/diaomina/project-images@master/%E6%94%B6%E6%AC%BE%E7%A0%81/wx.jpg)
 
 #### 体验地址  
-  [点这里](http://39.108.5.98/ticketing/)  （已失效）
+  [点这里](http://www.diaomina.xyz/ticketing/)  
 #### 测试账户  
   管理员账号：admin 密码：admin  
   会员账号：user 密码：user  
